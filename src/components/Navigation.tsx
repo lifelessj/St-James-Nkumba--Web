@@ -31,7 +31,7 @@ export function Navigation() {
           <span className="text-lg font-semibold text-secondary-foreground md:hidden lg:block">
             St. James
           </span>
-          <div className="hidden md:block">
+          <div className="hidden md:block mr-auto">
             <div className="text-lg font-bold text-primary text-red-400">St. James Nkumba</div>
             <div className="text-xs text-muted-foreground">Primary School</div>
           </div>

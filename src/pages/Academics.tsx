@@ -23,17 +23,17 @@ export default function Academics() {
   ];
 
   const schedule = [
-    { time: "7:00 - 7:30 AM", activity: "Assembly & Devotion" },
-    { time: "7:30 - 8:30 AM", activity: "First Lesson" },
-    { time: "8:30 - 9:30 AM", activity: "Second Lesson" },
-    { time: "9:30 - 10:00 AM", activity: "Break Time" },
-    { time: "10:00 - 11:00 AM", activity: "Third Lesson" },
-    { time: "11:00 - 12:00 PM", activity: "Fourth Lesson" },
-    { time: "12:00 - 1:00 PM", activity: "Lunch Break" },
-    { time: "1:00 - 2:00 PM", activity: "Fifth Lesson" },
-    { time: "2:00 - 3:00 PM", activity: "Sixth Lesson" },
-    { time: "3:00 - 4:00 PM", activity: "Co-curricular Activities" },
-    { time: "4:00 - 5:00 PM", activity: "Prep Time / Departure" }
+    { time: "6:00 - 7:30 AM", activity: "Arrival & Morning Preparations" },
+    { time: "7:30 - 8:50 AM", activity: "First Lesson" },
+    { time: "8:50 - 10:10 AM", activity: "Second Lesson" },
+    { time: "10:10 - 11:00 AM", activity: "Break Time" },
+    { time: "11:00 - 12:00 PM", activity: "Third Lesson" },
+    { time: "12:00 - 1:00 PM", activity: "Fourth Lesson" },
+    { time: "1:00 - 2:00 PM", activity: "Lunch Break" },
+    { time: "2:00 - 3:00 PM", activity: "Fifth Lesson" },
+    { time: "3:00 - 4:00 PM", activity: "Sixth Lesson" },
+    { time: "4:00 - 5:00 PM", activity: "Co-curricular Activities" },
+    { time: "5:00 - 5:30 PM", activity: "clean-up & Departure" }
   ];
 
   return (
@@ -157,11 +157,11 @@ export default function Academics() {
               </Card>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Assessment */}
               <Card className="shadow-card border-0">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">Assessment & Evaluation</CardTitle>
+                  <CardTitle className="text-xl text-red-600">Assessment & Evaluation</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
@@ -210,7 +210,7 @@ export default function Academics() {
                     </div>
                     <div>
                       <div className="font-medium">Term 3: September - December</div>
-                      <div className="text-sm text-muted-foreground">Final exams and graduation</div>
+                      <div className="text-sm text-muted-foreground">Final exams and promotions</div>
                     </div>
                   </div>
 
