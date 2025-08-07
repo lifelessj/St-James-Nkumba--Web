@@ -11,7 +11,7 @@ export function Footer() {
           {/* School Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold">
+              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground font-bold hover:shadow-xl hover:scale-[1.08] transition-all duration-300 ease-in-out cursor-pointer">
                 <img
                   src="src/assets/sjps logo.png"
                   alt="St. James Logo"
@@ -33,16 +33,16 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Quick Links</h3>
             <nav className="space-y-2">
-              <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 About Us
               </Link>
-              <Link to="/academics" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/academics" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 Academics
               </Link>
-              <Link to="/admissions" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/admissions" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 Admissions
               </Link>
-              <Link to="/news" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/news" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 News & Events
               </Link>
             </nav>
@@ -94,13 +94,13 @@ export function Footer() {
               <div className="flex space-x-3">
                 <a
                   href="https://www.instagram.com/stjamesnkumbaprimarysch_mpala?igsh=bWJvYWwxamZ3cGEz"
-                  className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-200"
+                  className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-200  hover:shadow-xl hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
                 <a
                   href="https://www.tiktok.com/@st.james_pri_sch_mpala?_t=ZM-8ya2WRML8pq&_r=1"
-                  className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-200"
+                  className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-200  hover:shadow-xl hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer"
                 >
                   <img src={Tiktok} alt="Tiktok" className="h-4 w-4" />
                 </a>

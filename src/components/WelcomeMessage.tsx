@@ -7,7 +7,7 @@ export function WelcomeMessage() {
     <section className="py-16 bg-peaceful">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <Card className="shadow-card border-0 overflow-hidden">
+          <Card className="shadow-card border-0 overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-3 gap-0">
                 {/* Image */}
@@ -24,8 +24,8 @@ export function WelcomeMessage() {
                 <div className="md:col-span-2 p-8 md:p-12">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
-                      <Quote className="h-8 w-8 text-secondary" />
-                      <h2 className="text-2xl md:text-3xl font-bold text-red-800">
+                      <Quote className="h-8 w-8 text-secondary  hover:shadow-xl hover:scale-[1.5] transition-all duration-300 ease-in-out cursor-pointer" />
+                      <h2 className="text-2xl md:text-3xl font-bold text-red-800  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                         Welcome Message
                       </h2>
                     </div>
@@ -52,7 +52,7 @@ export function WelcomeMessage() {
                     </blockquote>
 
                     <div className="pt-4 border-t">
-                      <div className="font-semibold text-lg text-red-800">Mrs. Sarah Namusoke</div>
+                      <div className="font-semibold text-lg text-red-800 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Mrs. Sarah Namusoke</div>
                       <div className="text-muted-foreground">Headteacher</div>
                       <div className="text-sm text-muted-foreground mt-1">
                         St. James Nkumba Primary School

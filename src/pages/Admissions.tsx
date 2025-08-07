@@ -37,7 +37,7 @@ export default function Admissions() {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="bg-gradient-primary text-gray-800 py-16">
+      <section className="bg-gray-100 bg-gradient-primary text-gray-800 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Admissions</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -167,17 +167,17 @@ export default function Admissions() {
                       <div className="flex justify-between">
                         <span> UNIFORMS:</span>
                         <p> NUR </p>
-                        <span className="font-medium">UGX 150,000-340,00 (estimate)</span>
+                        <span className="font-medium">UGX 160,000-260,000 (estimate)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>       </span>
                         <p className="text-center"> P.1 - P.4</p>
-                        <span className="font-medium">UGX 150,000-340,000 (estimate)</span>
+                        <span className="font-medium">UGX 200,000-300,000 (estimate)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>        </span>
                         <p className="text-center mr-center"> P.5 - P.7</p>
-                        <span className="font-medium">UGX 150,000-340,000 (estimate)</span>
+                        <span className="font-medium">UGX 10,000-340,000 (estimate)</span>
                       </div>
                     </div>
                   </div>

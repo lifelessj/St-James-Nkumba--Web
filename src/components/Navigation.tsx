@@ -21,12 +21,12 @@ export function Navigation() {
   return (
     <nav className="sticky top-10 z-50 bg-background/95 backdrop-blur-sm border-b shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16  hover:shadow-xl hover:scale-[1.0] transition-all duration-300 ease-in-out cursor-pointer">
           {/* Logo */}
           <img
             src="src/assets/Logo.png"
             alt="St. James Logo"
-            className="w-12 h-12 rounded-full object-cover"
+            className="w-12 h-12 rounded-full object-cover  hover:shadow-xl hover:scale-[1.09] transition-all duration-300 ease-in-out cursor-pointer"
           />
           <span className="text-lg font-semibold text-secondary-foreground md:hidden lg:block">
             St. James
@@ -71,7 +71,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden border-t bg-background">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 ">
               {navigationItems.map((item) => {
                 const isActive = location.pathname === item.href;
                 const Icon = item.icon;
@@ -83,7 +83,7 @@ export function Navigation() {
                       "flex items-center px-3 py-3 text-sm font-medium rounded-md transition-all duration-200",
                       isActive
                         ? "bg-orange-500 text-white-foreground"
-                        : "text-foreground hover:bg-orange-100 hover:text-primary"
+                        : "text-foreground hover:bg-orange-100 hover:text-primary  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
                     )}
                     onClick={() => setIsOpen(false)}
                   >

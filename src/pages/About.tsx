@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Target, Eye, Star, Users, BookOpen, Award, Cross, Flame, Hammer } from "lucide-react";
+import { Heart, Target, Eye, Star, Users, BookOpen, Award, Cross, Flame, Hammer, GraduationCap } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import schoolBuildingImage from "@/assets/school-building.jpg";
@@ -19,8 +19,8 @@ export default function About() {
     },
     {
       icon: Heart,
-      title: "Care & Nurture",
-      description: "Every child is valued and supported in their individual growth journey."
+      title: "Hard Work",
+      description: "Instilling a strong work ethic and dedication to personal growth in every student."
     },
     {
       icon: Users,
@@ -38,13 +38,13 @@ export default function About() {
           <img
             src={schoolBuildingImage}
             alt="St. James Nkumba Primary School building"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-30  hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer"
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-red-900">About Us</h1>
-            <p className="text-xl opacity-90 text-gray-800">Our Story, Motto, Mission & Values</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-red-900 hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer">About Us</h1>
+            <p className="text-xl opacity-90 text-gray-800  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Our Story, Motto, Mission & Values</p>
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function About() {
             <div className="space-y-6">
               <div>
                 <Badge className="bg-secondary text-secondary-foreground mb-4">Our History</Badge>
-                <h2 className="text-3xl font-bold text-red-800 mb-4">Building Excellence Since 1999</h2>
+                <h2 className="text-3xl font-bold text-red-800 mb-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Building Excellence Since 1999</h2>
               </div>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
@@ -95,7 +95,7 @@ export default function About() {
         {/* Mission & Vision */}
         <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md bg-gray-100 border-0  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-orange-600" />
@@ -111,7 +111,7 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md bg-gray-100 border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Hammer className="h-8 w-8 text-orange-600" />
@@ -127,7 +127,7 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md bg-gray-100 border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="h-8 w-8 text-secondary text-orange-600" />
@@ -149,20 +149,20 @@ export default function About() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <Badge className="bg-accent text-accent-foreground mb-4">Our Values</Badge>
-            <h2 className="text-3xl font-bold text-red-900 mb-4">What We Stand For</h2>
+            <h2 className="text-3xl font-bold text-red-900 mb-4  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">What We Stand For</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our core values guide everything we do and shape the character of our students.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 hover:shadow-xl hover:scale-[1.0] transition-all duration-300 ease-in-out cursor-pointer">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <Card key={index} className="text-center group hover:shadow-card transition-all duration-300 border-0 shadow-soft">
+                <Card key={index} className="bg-gray-100 shadow-md text-center group hover:shadow-card transition-all duration-300 border-0 shadow-soft  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                   <CardHeader className="pb-4">
                     <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="h-8 w-8 text-white" />
+                      <Icon className="h-8 w-8 text-red-600" />
                     </div>
                     <CardTitle className="text-lg">{value.title}</CardTitle>
                   </CardHeader>
@@ -188,17 +188,17 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="shadow-card border-0 text-center">
+            <Card className="shadow-md border-0 text-center  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardContent className="pt-8">
-                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                  <GraduationCap className="h-10 w-10 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-2">Qualified Teachers</h3>
                 <p className="text-muted-foreground">All our teachers hold relevant degrees and teaching qualifications.</p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card border-0 text-center">
+            <Card className="shadow-md border-0 text-center  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardContent className="pt-8">
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-800 text-2xl font-bold">
                   15+
@@ -208,7 +208,7 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card border-0 text-center">
+            <Card className="shadow-md border-0 text-center  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               <CardContent className="pt-8">
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-10 w-10 text-primary" />

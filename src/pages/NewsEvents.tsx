@@ -9,7 +9,7 @@ export default function NewsEvents() {
   const newsArticles = [
     {
       id: 1,
-      title: "Outstanding Performance in 2023 PLE Results",
+      title: "Outstanding Performance in 2024 PLE Results",
       excerpt: "We are proud to announce that 95% of our P.7 students passed the Primary Leaving Examinations with flying colors.",
       date: "2024-01-15",
       category: "Academic",
@@ -43,8 +43,8 @@ export default function NewsEvents() {
     {
       id: 1,
       title: "Annual Sports Day",
-      date: "2024-03-15",
-      time: "9:00 AM - 4:00 PM",
+      date: "To be announced",
+      time: "To be announced",
       location: "School Sports Ground",
       description: "Annual athletics competition featuring track and field events, football, netball, and fun activities for all classes.",
       category: "Sports",
@@ -52,19 +52,19 @@ export default function NewsEvents() {
     },
     {
       id: 2,
-      title: "Science Fair 2024",
-      date: "2024-02-28",
-      time: "10:00 AM - 2:00 PM",
+      title: "Exhibition 2025",
+      date: "to be announced",
+      time: "to be announced",
       location: "School Hall",
-      description: "Students will showcase their innovative science projects and experiments. Parents and guardians are welcome.",
+      description: "Students will showcase their innovative projects and experiments. Parents and guardians are welcome.",
       category: "Academic",
       urgent: true
     },
     {
       id: 3,
       title: "Parent-Teacher Conference",
-      date: "2024-02-20",
-      time: "2:00 PM - 5:00 PM",
+      date: "to be announced",
+      time: "to be announced",
       location: "Various Classrooms",
       description: "Individual meetings to discuss student progress, challenges, and development plans.",
       category: "Academic",

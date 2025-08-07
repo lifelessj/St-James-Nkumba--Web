@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Content */}
           <div className="text-black space-y-6">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 Welcome to{" "}
                 <span className="text-secondary text-red-600">St. James Nkumba</span>{" "}
                 Primary School
@@ -35,7 +35,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-red-500 hover:bg-red-600 text-white shadow-glow"
+                className="bg-red-500 hover:bg-red-600 text-white shadow-glow  hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer"
               >
                 <Link to="/admissions">
                   Apply Now <ArrowRight className="ml-2 h-5 w-5" />
@@ -45,7 +45,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/30 text-black hover:bg-white/10"
+                className="border-white/30 text-black hover:bg-black  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
               >
                 <Link to="/about">
                   Learn More
@@ -58,30 +58,30 @@ export function HeroSection() {
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <BookOpen className="h-6 w-6 text-secondary" />
+                    <BookOpen className="h-6 w-6 text-secondary hover:shadow-xl hover:scale-[2] transition-all duration-300 ease-in-out cursor-pointer" />
                   </div>
                 </div>
-                <div className="text-2xl font-bold">Nursery</div>
-                <div className="text-2xl font-bold">P.1 - P.7</div>
-                <div className="text-sm opacity-80">Classes</div>
+                <div className="text-2xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Nursery</div>
+                <div className="text-2xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">P.1 - P.7</div>
+                <div className="text-sm opacity-80  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Classes</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <Users className="h-6 w-6 text-secondary" />
+                    <Users className="h-6 w-6 text-secondary hover:shadow-xl hover:scale-[2] transition-all duration-300 ease-in-out cursor-pointer" />
                   </div>
                 </div>
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm opacity-80">Students</div>
+                <div className="text-2xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">500+</div>
+                <div className="text-sm opacity-80  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Students</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <Award className="h-6 w-6 text-secondary" />
+                    <Award className="h-6 w-6 text-secondary hover:shadow-xl hover:scale-[2] transition-all duration-300 ease-in-out cursor-pointer" />
                   </div>
                 </div>
-                <div className="text-2xl font-bold">25+</div>
-                <div className="text-sm opacity-80">Years</div>
+                <div className="text-2xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">25+</div>
+                <div className="text-sm opacity-80  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Years</div>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Clock, Users, Trophy, Download, Calendar } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import Library from "@/assets/Library.jpg";
 
 export default function Academics() {
   const subjects = [
@@ -41,6 +42,13 @@ export default function Academics() {
       <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-primary text-gray-800 py-16">
+        <div className="absolute inset-0">
+          <img
+            src={Library}
+            alt="St. James Nkumba Primary School building"
+            className="px-4 py-12 w-full h-65 object-cover opacity-30  hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer"
+          />
+        </div>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Academics</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -54,7 +62,7 @@ export default function Academics() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <Badge className="bg-secondary text-secondary-foreground mb-4">Curriculum</Badge>
-            <h2 className="text-3xl font-bold text-orange-700 mb-4">What We Teach</h2>
+            <h2 className="text-3xl font-bold text-orange-900 mb-4">What We Teach</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our curriculum follows the Uganda National Curriculum with enhanced Christian education and life skills.
             </p>
@@ -62,7 +70,7 @@ export default function Academics() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {subjects.map((subject, index) => (
-              <Card key={index} className="shadow-soft border-0 hover:shadow-card transition-all duration-300">
+              <Card key={index} className="shadow-md bg-gray-300 border-0 hover:shadow-card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-4 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <BookOpen className="h-6 w-6 text-primary" />
@@ -76,15 +84,15 @@ export default function Academics() {
           <div className="bg-accent-light p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-orange-900 mb-3">Special Programs</h3>
             <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <Trophy className="h-4 w-4 text-accent" />
                 <span>Debate & Public Speaking</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <Trophy className="h-4 w-4 text-accent" />
                 <span>Swimming lessons</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <Trophy className="h-4 w-4 text-accent" />
                 <span>Computer Literacy</span>
               </div>
@@ -96,19 +104,19 @@ export default function Academics() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <Badge className="bg-yellow-400 text-white mb-4">Classes</Badge>
-            <h2 className="text-3xl font-bold text-orange-900 mb-4">Class Structure (P.1 - P.7)</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-orange-900 mb-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Class Structure (P.1 - P.7)</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
               Age-appropriate learning with small class sizes for personalized attention.
             </p>
           </div>
 
           <div className="grid gap-4">
             {classes.map((classInfo, index) => (
-              <Card key={index} className="shadow-md border-2 hover:2xl hover:shadow-card transition-all duration-200">
+              <Card key={index} className="bg-green-100 shadow-md border-2 hover:2xl hover:shadow-card transition-all duration-200 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-6">
                   <div className="grid md:grid-cols-4 gap-4 items-center">
                     <div className="text-center md:text-left">
-                      <div className="text-2xl font-bold text-red-700">{classInfo.level}</div>
+                      <div className="text-2xl font-bold text-red-900">{classInfo.level}</div>
                       <div className="text-sm text-muted-foreground">{classInfo.age}</div>
                     </div>
                     <div className="text-center md:text-left">
@@ -139,18 +147,18 @@ export default function Academics() {
                 </p>
               </div>
 
-              <Card className="shadow-card border-0">
+              <Card className="shadow-md bg-blue-100 border-0">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Clock className="h-5 w-5 text-primary" />
                     <span>Monday - Friday</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-3 text-md">
                   {schedule.map((item, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-                      <span className="font-medium text-sm">{item.time}</span>
-                      <span className="text-sm text-muted-foreground">{item.activity}</span>
+                    <div key={index} className="flex justify-between items-center py-2 border-b border-white last:border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer bg-blue-200 rounded-md">
+                      <span className="font-medium text-lg font-semibold">{item.time}</span>
+                      <span className="text-sm text-foreground">{item.activity}</span>
                     </div>
                   ))}
                 </CardContent>
@@ -159,7 +167,7 @@ export default function Academics() {
 
             <div className="space-y-6">
               {/* Assessment */}
-              <Card className="shadow-card border-0">
+              <Card className="shadow-md border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer bg-gray-100">
                 <CardHeader>
                   <CardTitle className="text-xl text-red-600">Assessment & Evaluation</CardTitle>
                 </CardHeader>
@@ -214,7 +222,7 @@ export default function Academics() {
                     </div>
                   </div>
 
-                  <Button className="w-full mt-4" variant="outline">
+                  <Button className=" bg-gray-200 w-full mt-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer" variant="outline">
                     <Download className="h-4 w-4 mr-2" />
                     Download Academic Calendar
                   </Button>

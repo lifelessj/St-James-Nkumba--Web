@@ -42,7 +42,7 @@ export function NewsEventsSection() {
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer hover:border-rounded-lg">
             Latest News & Events
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -54,7 +54,7 @@ export function NewsEventsSection() {
           {newsItems.map((item) => {
             const Icon = item.icon;
             return (
-              <Card key={item.id} className="group hover:shadow-card transition-all duration-300 border-0 shadow-soft">
+              <Card key={item.id} className="group hover:shadow-card transition-all duration-300 border-0 shadow-md hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer hover:color-gray-300">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center space-x-2">
@@ -98,7 +98,7 @@ export function NewsEventsSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" className="bg-red-700 hover:bg-red-800">
+          <Button asChild size="lg" className="bg-red-700 hover:bg-red-800  hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer">
             <Link to="/news">
               View All News & Events <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
