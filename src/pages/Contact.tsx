@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock, Facebook, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, MessageCircle, Instagram } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import Tiktok from "../assets/Tiktok.svg";
 
 export default function Contact() {
   return (
@@ -14,8 +15,8 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Contact Us</h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-700">
             Get in touch with us. We're here to help and answer any questions you may have.
           </p>
         </div>
@@ -27,7 +28,7 @@ export default function Contact() {
           <div>
             <Card className="shadow-card border-0">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Send us a Message</CardTitle>
+                <CardTitle className="text-2xl text-orange-900">Send us a Message</CardTitle>
                 <p className="text-muted-foreground">
                   We'll respond to your message within 24 hours during school days.
                 </p>
@@ -43,32 +44,32 @@ export default function Contact() {
                     <Input id="lastName" placeholder="Doe" />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
                   <Input id="email" type="email" placeholder="john.doe@example.com" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input id="phone" placeholder="+256 700 123 456" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
                   <Input id="subject" placeholder="What is this about?" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
+                  <Textarea
+                    id="message"
                     placeholder="Your message here..."
                     rows={6}
                   />
                 </div>
-                
-                <Button className="w-full" size="lg">
+
+                <Button className="w-full bg-gray-900 hover:bg-blue-100 text-gray-100 hover:text-gray-900 transition-colors" size="lg">
                   Send Message
                 </Button>
               </CardContent>
@@ -88,42 +89,40 @@ export default function Contact() {
                   <div>
                     <div className="font-semibold text-lg">School Address</div>
                     <div className="text-muted-foreground leading-relaxed">
-                      St. James Nkumba Primary School<br/>
-                      Nkumba Road, Entebbe<br/>
-                      Wakiso District, Uganda<br/>
-                      P.O. Box 123, Entebbe
+                      St. James Nkumba Primary School<br />
+                      Lyamutundwe, Mpala-Entebbe<br />
+                      Wakiso District, Uganda<br />
+                      P.O. Box 86, Abaita Ababiri
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <div className="font-semibold text-lg">Phone Numbers</div>
                     <div className="text-muted-foreground">
-                      <div>Main Office: +256 700 123 456</div>
-                      <div>Headteacher: +256 701 234 567</div>
-                      <div>Admissions: +256 702 345 678</div>
+                      <div>Main Office: +256 705 339 746</div>
+                      <div>Headteacher: +256 702 997 656</div>
+                      <div>Admissions: +256 772 327 842</div>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <MessageCircle className="h-6 w-6 text-primary" />
                   <div>
                     <div className="font-semibold text-lg">WhatsApp</div>
-                    <div className="text-muted-foreground">+256 700 123 456</div>
+                    <div className="text-muted-foreground">+256 705 339 746</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <Mail className="h-6 w-6 text-primary" />
                   <div>
                     <div className="font-semibold text-lg">Email Addresses</div>
                     <div className="text-muted-foreground">
-                      <div>General: info@stjamesnkumba.ac.ug</div>
-                      <div>Admissions: admissions@stjamesnkumba.ac.ug</div>
-                      <div>Headteacher: head@stjamesnkumba.ac.ug</div>
+                      <div>stjamesnkumba@gmail.com</div>
                     </div>
                   </div>
                 </div>
@@ -153,10 +152,10 @@ export default function Contact() {
                     <span className="text-muted-foreground">Closed</span>
                   </div>
                 </div>
-                
+
                 <div className="pt-4 border-t">
                   <div className="text-sm text-muted-foreground">
-                    <strong>Note:</strong> During school holidays, office hours may vary. 
+                    <strong>Note:</strong> During school holidays, office hours may vary.
                     Please call ahead to confirm availability.
                   </div>
                 </div>
@@ -170,21 +169,33 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
-                  <a 
-                    href="#" 
+                  <a
+                    href="https://www.instagram.com/stjamesnkumbaprimarysch_mpala?igsh=bWJvYWwxamZ3cGEz"
                     className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors"
                   >
-                    <Facebook className="h-6 w-6 text-primary" />
+                    <Instagram className="h-6 w-6 text-primary" />
                     <div>
-                      <div className="font-medium">Facebook</div>
-                      <div className="text-sm text-muted-foreground">@stjamesnkumba</div>
+                      <div className="font-medium">Instagram</div>
+                      <div className="text-sm text-muted-foreground">@stjamesnkumbaprimarysch_mpala</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@st.james_pri_sch_mpala?_t=ZM-8ya2WRML8pq&_r=1"
+                    className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors"
+                  >
+                    <img src={Tiktok} alt="Tiktok" className="h-4 w-4" />
+                    <div className="flex items-center space-x-3">
+                      <div>
+                        <div className="font-medium">Tiktok</div>
+                        <div className="text-sm text-muted-foreground">@st.james_pri_sch_mpala</div>
+                      </div>
                     </div>
                   </a>
                 </div>
-                
+
                 <div className="mt-4 p-4 bg-secondary-light rounded-lg">
                   <div className="text-sm text-gray-700">
-                    Stay connected with us on social media for the latest updates, 
+                    Stay connected with us on social media for the latest updates,
                     photos from school events, and important announcements.
                   </div>
                 </div>
@@ -197,31 +208,32 @@ export default function Contact() {
         <section className="mt-16">
           <Card className="shadow-card border-0">
             <CardHeader>
-              <CardTitle className="text-2xl text-primary text-center">Find Us on the Map</CardTitle>
+              <CardTitle className="text-2xl text-gray-800 text-center">Find Us on the Map</CardTitle>
               <p className="text-muted-foreground text-center">
                 Located in the heart of Entebbe, easily accessible by public and private transport
               </p>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted h-64 md:h-96 rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="h-12 w-12 mx-auto mb-4" />
-                  <div className="text-lg font-medium">Interactive Map</div>
-                  <div className="text-sm">Google Maps integration would be placed here</div>
-                  <div className="text-xs mt-2">Nkumba Road, Entebbe, Wakiso District</div>
-                </div>
-              </div>
-              
+              <iframe
+                className="bg-muted h-64 w-full md:h-96 rounded-lg flex items-center justify-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.24352171167!2d32.494534051577325!3d0.11064839821219981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d858b15e104f3%3A0x830c2e9d2217bd55!2sSt.%20James%20Nkumba%20Nursery%20and%20Primary%20School%20Mpala!5e0!3m2!1sen!2sug!4v1754550415175!5m2!1sen!2sug"
+                frameBorder="0"
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+                title="St. James Nkumba Primary School Map"
+              />
+
               <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-                <div className="text-center p-3 bg-primary-light rounded-lg">
+                <div className="text-center p-3 bg-primary-light rounded-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                   <div className="font-semibold text-primary">By Car</div>
                   <div className="text-muted-foreground">Ample parking available on campus</div>
                 </div>
-                <div className="text-center p-3 bg-secondary-light rounded-lg">
+                <div className="text-center p-3 bg-secondary-light rounded-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                   <div className="font-semibold text-primary">By Taxi/Bus</div>
-                  <div className="text-muted-foreground">Regular transport to Entebbe town</div>
+                  <div className="text-muted-foreground">Regular transport to Mpala-Entebbe, Around Keba Express Hotel</div>
                 </div>
-                <div className="text-center p-3 bg-accent-light rounded-lg">
+                <div className="text-center p-3 bg-accent-light rounded-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                   <div className="font-semibold text-primary">Walking Distance</div>
                   <div className="text-muted-foreground">Safe pedestrian access from main road</div>
                 </div>

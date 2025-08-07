@@ -84,8 +84,8 @@ export default function NewsEvents() {
       {/* Hero Section */}
       <section className="bg-gradient-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">News & Events</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">News & Events</h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto text-muted-foreground">
             Stay updated with the latest news, announcements, and upcoming events at our school
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function NewsEvents() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <Badge className="bg-secondary text-secondary-foreground mb-4">Latest News</Badge>
-            <h2 className="text-3xl font-bold text-primary mb-4">School News & Announcements</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">School News & Announcements</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Important updates and exciting news from our school community
             </p>
@@ -108,28 +108,28 @@ export default function NewsEvents() {
               <Card className="shadow-card border-0 overflow-hidden">
                 <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                   <div className="text-center">
-                    <Trophy className="h-16 w-16 text-primary/60 mx-auto mb-4" />
+                    <Trophy className="h-16 w-16 text-orange-600 mx-auto mb-4" />
                     <Badge className="bg-secondary text-secondary-foreground">Featured</Badge>
                   </div>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
-                    <Badge className="bg-primary text-primary-foreground">Academic</Badge>
+                    <Badge className="bg-yellow-500 text-white">Academic</Badge>
                     <span className="text-sm text-muted-foreground">3 min read</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-primary mb-3">
-                    Outstanding Performance in 2023 PLE Results
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                    Outstanding Performance in 2024 PLE Results
                   </h2>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    We are incredibly proud to announce that 95% of our Primary 7 students passed 
-                    the Primary Leaving Examinations with outstanding grades. This achievement 
-                    reflects our commitment to academic excellence and the dedication of our 
+                    We are incredibly proud to announce that 95% of our Primary 7 students passed
+                    the Primary Leaving Examinations with outstanding grades. This achievement
+                    reflects our commitment to academic excellence and the dedication of our
                     teachers and students.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Calendar className="h-4 w-4" />
-                      <span>January 15, 2024</span>
+                      <span>January 15, 2025</span>
                     </div>
                     <Button variant="outline" size="sm">
                       Read More <ArrowRight className="h-3 w-3 ml-2" />
@@ -154,7 +154,7 @@ export default function NewsEvents() {
                           <Badge variant="secondary" className="text-xs mb-2">
                             {article.category}
                           </Badge>
-                          <h3 className="font-semibold text-primary text-sm mb-2 leading-tight">
+                          <h3 className="font-semibold text-gray-900 text-sm mb-2 leading-tight">
                             {article.title}
                           </h3>
                           <p className="text-xs text-muted-foreground mb-2 leading-relaxed">
@@ -178,7 +178,7 @@ export default function NewsEvents() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <Badge className="bg-accent text-accent-foreground mb-4">Upcoming</Badge>
-            <h2 className="text-3xl font-bold text-primary mb-4">School Events Calendar</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">School Events Calendar</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Mark your calendars for these important upcoming events
             </p>
@@ -205,7 +205,7 @@ export default function NewsEvents() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {event.description}
                   </p>
-                  
+
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4 text-primary" />
@@ -257,7 +257,7 @@ export default function NewsEvents() {
                     </Button>
                   </div>
                 ))}
-                
+
                 <div className="pt-4 border-t">
                   <Button className="w-full" variant="outline">
                     View All Newsletters
@@ -286,19 +286,19 @@ export default function NewsEvents() {
                       <div className="text-muted-foreground">Mid-term break: March 11-15</div>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3 text-sm">
                     <div>
                       <div className="font-medium">Term 2</div>
-                      <div className="text-muted-foreground">May 6 - August 23, 2024</div>
+                      <div className="text-muted-foreground">May 6 - August 23, 2025</div>
                     </div>
                     <div>
                       <div className="font-medium">Term 3</div>
-                      <div className="text-muted-foreground">September 9 - December 6, 2024</div>
+                      <div className="text-muted-foreground">September 9 - December 6, 2025</div>
                     </div>
                   </div>
-                  
-                  <Button className="w-full mt-4">
+
+                  <Button className="w-full mt-4 bg-gray-900 hover:bg-blue-100 text-gray-100 hover:text-gray-900 transition-colors">
                     <Download className="h-4 w-4 mr-2" />
                     Download Full Calendar
                   </Button>

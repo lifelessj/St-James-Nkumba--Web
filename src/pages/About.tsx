@@ -56,7 +56,7 @@ export default function About() {
             <div className="space-y-6">
               <div>
                 <Badge className="bg-secondary text-secondary-foreground mb-4">Our History</Badge>
-                <h2 className="text-3xl font-bold text-red-800 mb-4">Building Excellence Since 2004</h2>
+                <h2 className="text-3xl font-bold text-red-800 mb-4">Building Excellence Since 1999</h2>
               </div>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
