@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight, Download, Bell, Trophy, BookOpen, Users, Megaphone } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import backgroundImage from "@/assets/news-events-hero.jpg";
+import background from "@/assets/ps.jpg";
 
 export default function NewsEvents() {
   const newsArticles = [
@@ -82,10 +84,12 @@ export default function NewsEvents() {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="bg-gradient-primary text-white py-16">
+      <section className="shadow-md  text-gray-800 py-16 md:py-24 lg:py-32 relative overflow-hidden muted-foreground"
+        style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}   >
+        <div className="absolute inset-0 bg-black/20 z-0 opacity-100"></div>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">News & Events</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto text-muted-foreground">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 z-10">News & Events</h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto z-10 text-gray-700">
             Stay updated with the latest news, announcements, and upcoming events at our school
           </p>
         </div>
@@ -105,9 +109,10 @@ export default function NewsEvents() {
           <div className="grid lg:grid-cols-3 gap-6">
             {/* Featured Article */}
             <div className="lg:col-span-2">
-              <Card className="shadow-card border-0 overflow-hidden">
-                <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center">
+              <Card className="shadow-md bg-slate-100 border-0 overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center"
+                  style={{ background: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}    >
+                  <div className="text-center ">
                     <Trophy className="h-16 w-16 text-orange-600 mx-auto mb-4" />
                     <Badge className="bg-secondary text-secondary-foreground">Featured</Badge>
                   </div>
@@ -131,8 +136,8 @@ export default function NewsEvents() {
                       <Calendar className="h-4 w-4" />
                       <span>January 15, 2025</span>
                     </div>
-                    <Button variant="outline" size="sm">
-                      Read More <ArrowRight className="h-3 w-3 ml-2" />
+                    <Button variant="outline" size="sm" className="flex items-center  hover:shadow-xl hover:scale-[1.08] transition-all duration-300 ease-in-out cursor-pointer">
+                      Read More <ArrowRight className="h-3 w-3 ml-2 hover:shadow-xl hover:scale-[2] transition-all duration-300 ease-in-out cursor-pointer" />
                     </Button>
                   </div>
                 </CardContent>
@@ -144,7 +149,7 @@ export default function NewsEvents() {
               {newsArticles.slice(1).map((article) => {
                 const Icon = article.icon;
                 return (
-                  <Card key={article.id} className="shadow-soft border-0 hover:shadow-card transition-all duration-300">
+                  <Card key={article.id} className="shadow-md border-gray-200 hover:shadow-card transition-all duration-300">
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -186,7 +191,7 @@ export default function NewsEvents() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event) => (
-              <Card key={event.id} className="shadow-card border-0 hover:shadow-glow transition-all duration-300">
+              <Card key={event.id} className="shadow-md border-gray-100 hover:shadow-glow transition-all duration-300 hover:shadow-xl hover:scale-[.99] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <Badge className={event.urgent ? "bg-secondary text-secondary-foreground" : "bg-primary text-primary-foreground"}>
@@ -251,7 +256,7 @@ export default function NewsEvents() {
                         {newsletter.date} • {newsletter.size}
                       </div>
                     </div>
-                    <Button size="sm" variant="outline">
+                    <Button size="sm" variant="outline" className="flex items-center hover:shadow-xl hover:scale-[.95] transition-all duration-300 ease-in-out cursor-pointer">
                       <Download className="h-3 w-3 mr-2" />
                       Download
                     </Button>
@@ -259,7 +264,10 @@ export default function NewsEvents() {
                 ))}
 
                 <div className="pt-4 border-t">
-                  <Button className="w-full" variant="outline">
+                  <Button
+                    variant="outline"
+                    className="w-full hover:shadow-xl hover:scale-[.95] transition-all duration-300 ease-in-out cursor-pointer"
+                  >
                     View All Newsletters
                   </Button>
                 </div>
@@ -267,7 +275,7 @@ export default function NewsEvents() {
             </Card>
 
             {/* Event Calendar */}
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md bg-black/10 border-0">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Calendar className="h-5 w-5 text-primary" />
@@ -298,7 +306,7 @@ export default function NewsEvents() {
                     </div>
                   </div>
 
-                  <Button className="w-full mt-4 bg-gray-900 hover:bg-blue-100 text-gray-100 hover:text-gray-900 transition-colors">
+                  <Button className="w-full mt-4 bg-gray-900 hover:bg-blue-100 text-gray-100 hover:text-gray-900 transition-colors hover:shadow-xl hover:scale-[.95] transition-all duration-300 ease-in-out cursor-pointer">
                     <Download className="h-4 w-4 mr-2" />
                     Download Full Calendar
                   </Button>

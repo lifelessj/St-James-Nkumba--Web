@@ -8,6 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Download, Phone, Mail, MapPin, CheckCircle, DollarSign, Calendar, FileText } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import Play from "../assets/play.jpg";
+
 
 export default function Admissions() {
   const fees = [
@@ -59,9 +61,9 @@ export default function Admissions() {
 
           <div className="grid md:grid-cols-5 gap-4">
             {process.map((item, index) => (
-              <Card key={index} className="text-center shadow-soft border-0 hover:shadow-card transition-all duration-300">
+              <Card key={index} className="text-center shadow-gray-400 bg-green-50 border-0 hover:shadow-gray-300 transition-all duration-300 hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-800 font-bold">
                     {item.step}
                   </div>
                   <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
@@ -85,11 +87,11 @@ export default function Admissions() {
                 </p>
               </div>
 
-              <Card className="shadow-card border-0">
+              <Card className="shadow-md bg-blue-50 border-xl hover:shadow-xl hover:scale-[0.99] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     {requirements.map((requirement, index) => (
-                      <div key={index} className="flex items-start space-x-3">
+                      <div key={index} className="flex items-start space-x-3 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                         <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
                         <span className="text-gray-700">{requirement}</span>
                       </div>
@@ -104,7 +106,7 @@ export default function Admissions() {
                     <p className="text-sm text-gray-700 mb-4">
                       Download our application form and fill it out completely before submission.
                     </p>
-                    <Button className="w-full">
+                    <Button className="w-full hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                       <Download className="h-4 w-4 mr-2" />
                       Download Application Form
                     </Button>
@@ -123,17 +125,17 @@ export default function Admissions() {
                 </p>
               </div>
 
-              <Card className="shadow-card border-0">
+              <Card className="shadow-md bg-blue-50 border-0 hover:shadow-xl hover:scale-[1.01] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <DollarSign className="h-5 w-5 text-primary" />
                     <span>Fee Structure (Per Term)</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-6 space-y-4">
                   <div className="space-y-4">
                     {fees.map((fee, index) => (
-                      <div key={index} className="border rounded-lg p-4">
+                      <div key={index} className="border rounded-lg p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer bg-blue-100">
                         <div className="font-bold text-red-900 mb-2">{fee.class}</div>
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           <div>
@@ -191,7 +193,7 @@ export default function Admissions() {
         <section>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Inquiry Form */}
-            <Card className="shadow-card border-0">
+            <Card className="shadow-card border-0 bg-gray-200 ">
               <CardHeader>
                 <CardTitle className="text-2xl text-orange-700">Make an Inquiry</CardTitle>
                 <p className="text-muted-foreground">

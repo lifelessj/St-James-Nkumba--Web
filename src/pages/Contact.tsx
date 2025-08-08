@@ -7,16 +7,18 @@ import { MapPin, Phone, Mail, Clock, Facebook, MessageCircle, Instagram } from "
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import Tiktok from "../assets/Tiktok.svg";
+import backgroundImage from "@/assets/happykids.jpg"
 
 export default function Contact() {
   return (
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="bg-gradient-primary text-white py-16">
+      <section className=" text-white py-17 md:py-24 lg:py-32"
+        style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgba(49, 47, 47, 0.5)' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Contact Us</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-700">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 z-10">Contact Us</h1>
+          <p className="text-xl opacity-100 font-bold max-w-2xl mx-auto text-gray-900 z-10">
             Get in touch with us. We're here to help and answer any questions you may have.
           </p>
         </div>
@@ -26,7 +28,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md bg-stone-200 border-0 ">
               <CardHeader>
                 <CardTitle className="text-2xl text-orange-900">Send us a Message</CardTitle>
                 <p className="text-muted-foreground">

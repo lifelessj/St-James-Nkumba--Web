@@ -5,6 +5,8 @@ import { Image, Calendar, Trophy, Users, BookOpen, Heart, Play, ArrowRight } fro
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import Chapel from "@/assets/chapel.jpg";
+import Dance from "@/assets/dance.jpg";
 
 export default function Gallery() {
   const albums = [
@@ -77,9 +79,12 @@ export default function Gallery() {
       <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-primary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Gallery</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-700">
+        <div className="absolute inset-0 py-16 bg-center">
+          <img src={Chapel} alt="Chapel" className="w-full h-64 object-cover mt-10 opacity-30 hover:opacity-40 transition-opacity duration-300" />
+        </div>
+        <div className="container mx-auto px-4 text-center ">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 opacity-90 max-w-2xl mx-auto text-gray-800">Gallery</h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-900">
             Capturing precious moments and memories from school life at St. James Nkumba
           </p>
         </div>
@@ -94,7 +99,7 @@ export default function Gallery() {
                 key={category}
                 variant={category === "All" ? "default" : "outline"}
                 size="sm"
-                className="rounded-full"
+                className="rounded-full z-10 hover:shadow-xl hover:scale-[1.09] transition-all duration-300 ease-in-out cursor-pointer"
               >
                 {category}
               </Button>
@@ -103,7 +108,7 @@ export default function Gallery() {
         </section>
 
         {/* Featured Albums */}
-        <section className="mb-16">
+        <section className="mb-16 bg-gray-100 p-8 rounded-lg shadow-md">
           <div className="text-center mb-12">
             <Badge className="bg-secondary text-secondary-foreground mb-4">Featured</Badge>
             <h2 className="text-3xl font-bold text-onyx mb-4">Latest Photo Albums</h2>
@@ -178,7 +183,7 @@ export default function Gallery() {
               return (
                 <motion.div key={album.id}
                   className="transition-all duration-200 border-0 hover:bg-gray-300 shadow-md" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Card key={album.id} className="group-hover:shadow-card transition-all duration-100 border-0 hover:bg-gray-300 shadow-md">
+                  <Card key={album.id} className="group-hover:shadow-md bg-gradient-to-br from-primary/20 to-secondary/20 transition-all duration-100 border-0 hover:bg-gray-300 shadow-md">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -232,7 +237,7 @@ export default function Gallery() {
 
         {/* Call to Action */}
         <section className="mt-16 text-center">
-          <Card className="shadow-card border-4 bg-gradient-peaceful">
+          <Card className="shadow-card border-4 bg-stone-100 hover:shadow-md hover:shadow-xl hover:scale-[1.00] transition-all duration-300 ease-in-out cursor-pointer  hover:bg-gradient-to-br from-primary/20 to-secondary/20 transition-all duration-300">
             <CardContent className="p-12">
               <div className="max-w-2xl mx-auto">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -243,10 +248,10 @@ export default function Gallery() {
                   from school life. Don't miss out on the latest photos and videos!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gray-500 hover:bg-gray-800 text-white">
+                  <Button size="lg" className="bg-gray-500 hover:bg-gray-800 text-white hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                     Follow on Tiktok
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="border-gray-500 text-gray-900 hover:bg-gray-100  hover:text-gray-900 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                     Subscribe to Newsletter
                   </Button>
                 </div>
@@ -256,6 +261,6 @@ export default function Gallery() {
         </section>
       </div>
       <Footer />
-    </div>
+    </div >
   );
 }
