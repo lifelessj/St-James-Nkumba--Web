@@ -70,12 +70,12 @@ export default function Academics() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {subjects.map((subject, index) => (
-              <Card key={index} className="shadow-md bg-black/100 border-0 hover:shadow-card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
+              <Card key={index} className="shadow-lg bg-gradient-to-r from-red-300 to-orange-900 border-white hover:shadow-card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-4 text-center">
                   <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
                     <BookOpen className="h-6 w-6 text-red-500" />
                   </div>
-                  <h3 className="font-semibold text-sm text-white">{subject}</h3>
+                  <h3 className="font-semibold text-lg text-white">{subject}</h3>
                 </CardContent>
               </Card>
             ))}

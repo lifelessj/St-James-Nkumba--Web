@@ -9,6 +9,8 @@ import { Download, Phone, Mail, MapPin, CheckCircle, DollarSign, Calendar, FileT
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import Play from "../assets/play.jpg";
+import { useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
 
 
 export default function Admissions() {
@@ -34,12 +36,54 @@ export default function Admissions() {
     { step: 4, title: "Admission Decision", description: "Receive admission decision within 5 working days" },
     { step: 5, title: "Fee Payment", description: "Pay admission and first term fees to secure place" }
   ];
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    childClass: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { error } = await supabase.from("inquiries").insert([
+      {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        child_class: formData.childClass,
+        message: formData.message,
+      },
+    ]);
+
+    if (error) {
+      alert("Failed to send. Please try again.");
+      console.error(error);
+    } else {
+      alert("Inquiry sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        childClass: "",
+        message: "",
+      });
+    }
+  };
+
 
   return (
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="bg-gray-100 bg-gradient-primary text-gray-800 py-16">
+      <section className="bg-gradient-to-r from-gray-600 to-orange-100 text-gray-800 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Admissions</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -106,10 +150,21 @@ export default function Admissions() {
                     <p className="text-sm text-gray-700 mb-4">
                       Download our application form and fill it out completely before submission.
                     </p>
-                    <Button className="w-full hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
+                    <a
+                      href="/application-form.pdf"
+                      download
+                      className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
+                    >
                       <Download className="h-4 w-4 mr-2" />
                       Download Application Form
-                    </Button>
+                    </a>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <CheckCircle className="h-5 w-5 text-green-500" />
+                      <span className="text-sm text-gray-700">Completed forms can be submitted via email or in person.</span>
+                    </div>
+                    <p className="text-sm text-gray-700 mt-4">
+                      If you have any questions, please contact us through Email, Mobile or Whatsapp.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -179,7 +234,7 @@ export default function Admissions() {
                       <div className="flex justify-between">
                         <span>        </span>
                         <p className="text-center mr-center"> P.5 - P.7</p>
-                        <span className="font-medium">UGX 10,000-340,000 (estimate)</span>
+                        <span className="font-medium">UGX 300,000-340,000 (estimate)</span>
                       </div>
                     </div>
                   </div>
@@ -201,57 +256,63 @@ export default function Admissions() {
                 </p>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="John" />
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Doe" />
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john.doe@example.com" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" placeholder="+256 700 123 456" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="childClass">Class of Interest</Label>
+                    <select
+                      id="childClass"
+                      name="childClass"
+                      value={formData.childClass}
+                      onChange={handleChange}
+                      className="w-full p-2 rounded border"
+                    >
+                      <option value="">Select class</option>
+                      <option value="p1">Primary 1</option>
+                      <option value="p2">Primary 2</option>
+                      <option value="p3">Primary 3</option>
+                      <option value="p4">Primary 4</option>
+                      <option value="p5">Primary 5</option>
+                      <option value="p6">Primary 6</option>
+                      <option value="p7">Primary 7</option>
+                    </select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="childClass">Class of Interest</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select class" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="p1">Primary 1</SelectItem>
-                      <SelectItem value="p2">Primary 2</SelectItem>
-                      <SelectItem value="p3">Primary 3</SelectItem>
-                      <SelectItem value="p4">Primary 4</SelectItem>
-                      <SelectItem value="p5">Primary 5</SelectItem>
-                      <SelectItem value="p6">Primary 6</SelectItem>
-                      <SelectItem value="p7">Primary 7</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your child and any questions you have..."
-                    rows={4}
-                  />
-                </div>
-
-                <Button className="w-full" size="lg">
-                  Send Inquiry
-                </Button>
+                  <Button type="submit" className="w-full hover:bg-orange-700 hover:scale-105" size="lg">
+                    Send Inquiry
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 
