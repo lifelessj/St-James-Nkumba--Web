@@ -21,6 +21,8 @@ export default function Admissions() {
     { class: "P.7", dayFee: "N/A", boardingFee: "1,100,000" }
   ];
 
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const requirements = [
     "Birth certificate or baptism card",
     "Previous school report (if transferring)",
@@ -309,7 +311,11 @@ export default function Admissions() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full hover:bg-orange-700 hover:scale-105" size="lg">
+                  <Button
+                    type="submit"
+                    className="w-full hover:bg-orange-700 hover:scale-105"
+                    size="lg"
+                  >
                     Send Inquiry
                   </Button>
                 </form>
@@ -318,7 +324,7 @@ export default function Admissions() {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <Card className="shadow-card border-0">
+              <Card className="shadow-md shadow-gray-200 border-0">
                 <CardHeader>
                   <CardTitle className="text-xl text-orange-800">Contact Information</CardTitle>
                 </CardHeader>
@@ -353,9 +359,9 @@ export default function Admissions() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card border-0">
+              <Card className="shadow-card border-0 bg-gray-100">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+                  <CardTitle className="flex items-centerspace-x-2">
                     <Calendar className="h-5 w-5 text-primary" />
                     <span>Admission Timeline</span>
                   </CardTitle>
