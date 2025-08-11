@@ -70,12 +70,12 @@ export default function Academics() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {subjects.map((subject, index) => (
-              <Card key={index} className="shadow-md bg-gray-300 border-0 hover:shadow-card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
+              <Card key={index} className="shadow-md bg-black/100 border-0 hover:shadow-card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">
                 <CardContent className="p-4 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <BookOpen className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <BookOpen className="h-6 w-6 text-red-500" />
                   </div>
-                  <h3 className="font-semibold text-sm">{subject}</h3>
+                  <h3 className="font-semibold text-sm text-white">{subject}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -156,8 +156,8 @@ export default function Academics() {
                 </CardHeader>
                 <CardContent className="space-y-3 text-md">
                   {schedule.map((item, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-white last:border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer bg-blue-200 rounded-md">
-                      <span className="font-medium text-lg font-semibold">{item.time}</span>
+                    <div key={index} className="flex justify-between items-center py-2 border-b border-blue last:border-0 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer bg-blue-200 rounded-md">
+                      <span className="font-medium text-sm font-semibold">{item.time}</span>
                       <span className="text-sm text-foreground">{item.activity}</span>
                     </div>
                   ))}
@@ -221,11 +221,14 @@ export default function Academics() {
                       <div className="text-sm text-muted-foreground">Final exams and promotions</div>
                     </div>
                   </div>
-
-                  <Button className=" bg-gray-200 w-full mt-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer" variant="outline">
+                  <a
+                    href="/academiccalendar3.docx"
+                    download
+                    className="inline-flex items-center justify-center bg-gray-200 hover:bg-gray-600 hover:text-white w-full mt-4 px-4 py-2 text-sm font-medium text-gray-800 border border-gray-300 rounded-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 clickmotion:scale-[1.02] ease-in-out"
+                  >
                     <Download className="h-4 w-4 mr-2" />
                     Download Academic Calendar
-                  </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
