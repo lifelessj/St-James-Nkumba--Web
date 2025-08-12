@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import Chapel from "@/assets/chapel.jpg";
 import Dance from "@/assets/dance.jpg";
+import { useState } from "react";
 
 export default function Gallery() {
   const albums = [
@@ -38,11 +39,12 @@ export default function Gallery() {
       date: "Ongoing",
       featured: false,
       category: "Spiritual",
-      icon: Heart
+      icon: Heart,
+      image: "/gallery/deputy.jpg"
     },
     {
       id: 4,
-      title: "Science Fair 2024",
+      title: "Exhibition",
       description: "Students showcasing their innovative projects",
       imageCount: 24,
       date: "February 2024",
