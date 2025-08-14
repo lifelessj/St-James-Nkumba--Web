@@ -165,7 +165,7 @@ export default function Contact() {
             </Card>
 
             {/* Social Media */}
-            <Card className="shadow-card border-0">
+            <Card className="shadow-card border-0 hover:shadow-xl hover:scale-[1.09] transition-all duration-300 ease-in-out cursor-pointer">
               <CardHeader>
                 <CardTitle className="text-xl text-primary">Follow Us</CardTitle>
               </CardHeader>
