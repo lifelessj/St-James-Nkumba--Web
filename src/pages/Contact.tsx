@@ -132,7 +132,7 @@ export default function Contact() {
             </Card>
 
             {/* Office Hours */}
-            <Card className="shadow-card border-0">
+            <Card className="shadow-md  shadow-gray-500 border-0">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Clock className="h-5 w-5 text-primary" />
@@ -165,15 +165,15 @@ export default function Contact() {
             </Card>
 
             {/* Social Media */}
-            <Card className="shadow-card border-0 hover:shadow-xl hover:scale-[1.09] transition-all duration-300 ease-in-out cursor-pointer">
+            <Card className="shadow-card border-0 ">
               <CardHeader>
                 <CardTitle className="text-xl text-primary">Follow Us</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 ">
                   <a
                     href="https://www.instagram.com/stjamesnkumbaprimarysch_mpala?igsh=bWJvYWwxamZ3cGEz"
-                    className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors"
+                    className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors hover:shadow-xl hover:scale-[0.98] transition-all duration-300 ease-in-out cursor-pointer"
                   >
                     <Instagram className="h-6 w-6 text-primary" />
                     <div>
@@ -183,7 +183,7 @@ export default function Contact() {
                   </a>
                   <a
                     href="https://www.tiktok.com/@st.james_pri_sch_mpala?_t=ZM-8ya2WRML8pq&_r=1"
-                    className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors"
+                    className="flex items-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors hover:shadow-xl hover:scale-[0.98] transition-all duration-300 ease-in-out cursor-pointer"
                   >
                     <img src={Tiktok} alt="Tiktok" className="h-4 w-4" />
                     <div className="flex items-center space-x-3">
