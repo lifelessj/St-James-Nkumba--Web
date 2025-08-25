@@ -10,7 +10,6 @@ import { useState, useEffect } from "react";
 export default function Academics() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
-
   useEffect(() => {
     // Initial page load animation
     setTimeout(() => setIsLoaded(true), 100);
