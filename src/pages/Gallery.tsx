@@ -7,9 +7,18 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import Chapel from "@/assets/chapel.jpg";
 import Dance from "@/assets/dance.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Gallery() {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleSections, setVisibleSections] = useState({});
+
+  useEffect(() => {
+    // Initial page load animation
+    setTimeout(() => setIsLoaded(true), 100);
+  }, []);
+
   const albums = [
     {
       id: 1,
@@ -84,7 +93,8 @@ export default function Gallery() {
         <div className="absolute inset-0 py-16 bg-center">
           <img src={Chapel} alt="Chapel" className="w-full h-64 object-cover mt-10 opacity-30 hover:opacity-40 transition-opacity duration-300" />
         </div>
-        <div className="container mx-auto px-4 text-center ">
+        <div className={`container mx-auto px-4 text-center transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+          }`}>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 opacity-90 max-w-2xl mx-auto text-gray-800">Gallery</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-900">
             Capturing precious moments and memories from school life at St. James Nkumba
@@ -94,8 +104,9 @@ export default function Gallery() {
 
       <div className="container mx-auto px-4 py-16">
         {/* Filter Buttons */}
-        <section className="mb-12">
-          <div className="flex flex-wrap justify-center gap-2">
+        <section className="mb-12 ">
+          <div className={`flex flex-wrap justify-center gap-2 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+            }`}>
             {categories.map((category) => (
               <Button
                 key={category}
@@ -111,7 +122,8 @@ export default function Gallery() {
 
         {/* Featured Albums */}
         <section className="mb-16 bg-gray-100 p-8 rounded-lg shadow-md">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+            }`}>
             <Badge className="bg-secondary text-secondary-foreground mb-4">Featured</Badge>
             <h2 className="text-3xl font-bold text-onyx mb-4">Latest Photo Albums</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -13,15 +13,53 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      {/* Hero Section */}
-      <section className=" text-white py-17 md:py-24 lg:py-32"
-        style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgba(49, 47, 47, 0.5)' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 z-10">Contact Us</h1>
-          <p className="text-xl opacity-100 font-bold max-w-2xl mx-auto text-gray-900 z-10">
+      {/* Enhanced Hero Section */}
+      <section className="relative text-white py-17 md:py-24 lg:py-32 overflow-hidden"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundColor: 'rgba(49, 47, 47, 0.5)'
+        }}>
+
+        {/* Overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-800/30 to-black/50"></div>
+
+        {/* Animated floating elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse backdrop-blur-sm"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute top-1/3 left-1/4 w-12 h-12 bg-orange-300/20 rounded-full animate-ping"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-14 h-14 bg-green-400/15 rounded-full animate-pulse delay-300"></div>
+
+        {/* Decorative lines */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          {/* Main heading with enhanced styling */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white relative">
+            <span className="bg-gradient-to-r from-white via-sky-300 to-white bg-clip-text text-transparent drop-shadow-lg">
+              Contact Us
+            </span>
+          </h1>
+
+          {/* Enhanced description */}
+          <p className="text-xl font-muted  max-w-2xl mx-auto text-gray-100 leading-relaxed drop-shadow-md mb-8">
             Get in touch with us. We're here to help and answer any questions you may have.
           </p>
+
+          {/* Call-to-action indicators */}
+          <div className="flex justify-center items-center space-x-8 mt-8">
+            <div className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">Quick Responses</span>
+            </div>
+          </div>
         </div>
+
+        {/* Corner decorations */}
+        <div className="absolute top-0 right-0 w-32 h-32 border-r-4 border-t-4 border-white/20 rounded-tl-full"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-white/20 rounded-tr-full"></div>
       </section>
 
       <div className="container mx-auto px-4 py-16">

@@ -4,8 +4,18 @@ import { Heart, Target, Eye, Star, Users, BookOpen, Award, Cross, Flame, Hammer,
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import schoolBuildingImage from "@/assets/school-building.jpg";
+import { useEffect, useState } from "react";
 
 export default function About() {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleSections, setVisibleSections] = useState({});
+
+  useEffect(() => {
+    // Initial page load animation
+    setTimeout(() => setIsLoaded(true), 100);
+  }, []);
+
   const values = [
     {
       icon: Cross,
@@ -33,7 +43,7 @@ export default function About() {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 bg-gradient-primary">
+      <section className="relative h-64 md:h-80 bg-gradient-primary ">
         <div className="absolute inset-0">
           <img
             src={schoolBuildingImage}
@@ -41,7 +51,8 @@ export default function About() {
             className="w-full h-full object-cover opacity-30  hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer"
           />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+          }`}>
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-red-900 hover:shadow-xl hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer">About Us</h1>
             <p className="text-xl opacity-90 text-gray-800  hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer">Our Story, Motto, Mission & Values</p>
@@ -51,7 +62,8 @@ export default function About() {
 
       <div className="container mx-auto px-4 py-16">
         {/* School History */}
-        <section className="mb-16">
+        <section className={`mb-16 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+          }`}>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div>

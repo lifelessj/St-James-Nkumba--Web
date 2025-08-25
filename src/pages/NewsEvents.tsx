@@ -6,8 +6,17 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import backgroundImage from "@/assets/news-events-hero.jpg";
 import background from "@/assets/ps.jpg";
+import { useEffect, useState } from "react";
 
 export default function NewsEvents() {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleSections, setVisibleSections] = useState({});
+
+  useEffect(() => {
+    // Initial page load animation
+    setTimeout(() => setIsLoaded(true), 100);
+  }, []);
   const newsArticles = [
     {
       id: 1,
@@ -87,7 +96,8 @@ export default function NewsEvents() {
       <section className="shadow-md  text-gray-800 py-16 md:py-24 lg:py-32 relative overflow-hidden muted-foreground"
         style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}   >
         <div className="absolute inset-0 bg-black/20 z-0 opacity-100"></div>
-        <div className="container mx-auto px-4 text-center">
+        <div className={`container mx-auto px-4 text-center transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+          }`}>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 z-10">News & Events</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto z-10 text-gray-700">
             Stay updated with the latest news, announcements, and upcoming events at our school
@@ -97,7 +107,8 @@ export default function NewsEvents() {
 
       <div className="container mx-auto px-4 py-16">
         {/* Latest News */}
-        <section className="mb-16">
+        <section className={`mb-16 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+          }`}>
           <div className="text-center mb-12">
             <Badge className="bg-secondary text-secondary-foreground mb-4">Latest News</Badge>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">School News & Announcements</h2>

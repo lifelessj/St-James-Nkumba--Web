@@ -9,11 +9,21 @@ import { Download, Phone, Mail, MapPin, CheckCircle, DollarSign, Calendar, FileT
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import Play from "../assets/play.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 
 
+
 export default function Admissions() {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleSections, setVisibleSections] = useState({});
+
+  useEffect(() => {
+    // Initial page load animation
+    setTimeout(() => setIsLoaded(true), 100);
+  }, []);
+
   const fees = [
     { class: "Nursery", dayFee: "500,000-600,000", boardingFee: "850,000" },
     { class: "P.1 - P.4", dayFee: "600,000", boardingFee: "900,000" },
@@ -85,7 +95,8 @@ export default function Admissions() {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-600 to-orange-100 text-gray-800 py-16">
+      <section className={`bg-gradient-to-r from-gray-600 to-orange-100 text-gray-800 py-16 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+        }`}>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Admissions</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -97,7 +108,8 @@ export default function Admissions() {
       <div className="container mx-auto px-4 py-3">
         {/* Admission Process */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+            }`}>
             <Badge className="bg-secondary text-secondary-foreground mb-4">Process</Badge>
             <h2 className="text-3xl font-bold text-orange-500 mb-4">Admission Process</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
