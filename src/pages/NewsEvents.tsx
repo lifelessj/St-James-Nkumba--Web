@@ -141,15 +141,24 @@ export default function NewsEvents() {
                     the Primary Leaving Examinations with outstanding grades. This achievement
                     reflects our commitment to academic excellence and the dedication of our
                     teachers and students.
+                    Our learners continue to shine, and this year's
+                    performance reflects the hard work, sacrifice and
+                    dedication of our teachers, students, parents, and school administration.
+                    Congratulations to all our students for their hard work and perseverance!
                   </p>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    We are committed to providing our students with the best possible education and support.
+                    Together, we can achieve great things!
+                  </p>
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Calendar className="h-4 w-4" />
                       <span>January 15, 2025</span>
                     </div>
-                    <Button variant="outline" size="sm" className="flex items-center  hover:shadow-xl hover:scale-[1.08] transition-all duration-300 ease-in-out cursor-pointer">
+                    {/* <Button variant="outline" size="sm" className="flex items-center  hover:shadow-xl hover:scale-[1.08] transition-all duration-300 ease-in-out cursor-pointer">
                       Read More <ArrowRight className="h-3 w-3 ml-2 hover:shadow-xl hover:scale-[2] transition-all duration-300 ease-in-out cursor-pointer" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -293,7 +302,7 @@ export default function NewsEvents() {
                   <span>Academic Calendar</span>
                 </CardTitle>
                 <p className="text-muted-foreground">
-                  View the complete academic calendar for the current year
+                  View the complete academic calendar for the current term
                 </p>
               </CardHeader>
               <CardContent>

@@ -9,7 +9,7 @@ const navigationItems = [
   { name: "About Us", href: "/about", icon: Users },
   { name: "Academics", href: "/academics", icon: GraduationCap },
   { name: "Admissions", href: "/admissions", icon: FileText },
-  { name: "Gallery", href: "/gallery", icon: Image },
+  /*name: "Gallery", href: "/gallery", icon: Image*/
   { name: "News & Events", href: "/news", icon: Calendar },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
